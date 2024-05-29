@@ -995,7 +995,7 @@ class TuyaDevice extends EventEmitter {
 
       // Add to array if it doesn't exist
       if (!this.foundDevices.some(e => (e.id === thisID && e.ip === thisIP))) {
-        this.foundDevices.push({id: thisID, ip: thisIP});
+        this.foundDevices.push({id: thisID, ip: thisIP, version: dataRes.payload.version});
       }
 
       if (!all &&
